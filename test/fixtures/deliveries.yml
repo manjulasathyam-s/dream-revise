@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_id: 1
+  delivery_partner: 1
+  delivery_status_id: 1
+  cancellation_id: 1
+
+two:
+  order_id: 1
+  delivery_partner: 1
+  delivery_status_id: 1
+  cancellation_id: 1

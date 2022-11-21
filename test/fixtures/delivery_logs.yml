@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  delivery_id: 1
+  intial_value: 1
+  final_value: 1
+  reason: MyString
+
+two:
+  delivery_id: 1
+  intial_value: 1
+  final_value: 1
+  reason: MyString

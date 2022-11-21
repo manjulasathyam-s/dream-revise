@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  delivery_id: 1
+  user_id: 1
+  product_acceptable: false
+  refund_inititation: false
+  product_received: false
+  refund_amount: false
+
+two:
+  delivery_id: 1
+  user_id: 1
+  product_acceptable: false
+  refund_inititation: false
+  product_received: false
+  refund_amount: false

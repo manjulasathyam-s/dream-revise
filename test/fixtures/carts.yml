@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: 1
+  total_items: 1
+  sub_total: 
+  total_unique_items: 1
+  available_discounts: false
+  currency: MyString
+  user_id: 1
+
+two:
+  product_id: 1
+  total_items: 1
+  sub_total: 
+  total_unique_items: 1
+  available_discounts: false
+  currency: MyString
+  user_id: 1
