@@ -1,4 +1,4 @@
-class ProductController < ActionController
+class ProductsController < ApplicationController
 	def get_products
 		@data=ProductInformation::ProductService.get_products
 	end
@@ -16,14 +16,20 @@ class ProductController < ActionController
 	end
 
 	def create_product
-		@data=ProductInformation::ProductService.create_product(params)
+		byebug
+		@data = Service::ProductInformation::ProductService.create_product(params)
+		if @data.save
+			puts "Saved"
+		end
 	end
 
 	def delete_product
 		@data=ProductInformation::ProductService.delete_product(product_id)
 	end
 
+	private
+	
 	def params
-		Product.params.()
+		params.permit(:product_name, :product_code, :category_id, :product_stock_id, :product_image, :price, :quantity)
 	end
 end

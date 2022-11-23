@@ -23,6 +23,7 @@ module ProductInformation
 		end
 
 		def self.create_product(params)
+			byebug
 			data = Product.create(params)
 		end
 
@@ -30,6 +31,5 @@ module ProductInformation
 			data = Product.find(product_id)
 			data.update(is_active: false)
 		end
-
 	end
 end
