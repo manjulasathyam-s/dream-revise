@@ -26,3 +26,4 @@ Things you may want to cover:
 # dream-cover
 # new-repo
 # repo-new
+# cover
