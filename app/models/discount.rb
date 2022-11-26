@@ -1,3 +1,3 @@
 class Discount < ApplicationRecord
-	has_many :products through: :product_discounts
+	has_many :products, through: :product_discounts
 end

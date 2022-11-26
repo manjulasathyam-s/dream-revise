@@ -23,7 +23,6 @@ module ProductInformation
 		end
 
 		def self.create_user(params)
-			byebug
 			data = User.create(params)
 		end
 

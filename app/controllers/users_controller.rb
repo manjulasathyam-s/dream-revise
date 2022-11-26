@@ -17,7 +17,6 @@ class UsersController < ApplicationController
 	end
 
 	def create_user
-		byebug
 		@data = ProductInformation::UserService.create_user(params)
 		if @data.save
 			puts "Saved"
