@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-	def get_products
+	def index
 		@data=ProductInformation::ProductService.get_products
 	end
 
