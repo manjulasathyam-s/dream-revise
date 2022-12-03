@@ -1,7 +1,6 @@
 class PaymentsController < ApplicationController
-	def get_payment
+	def payment_index
 		@data=ProductInformation::PaymentService.get_payment
-		render :json =>  @data
 	end
 
 	def new_payment

@@ -251,6 +251,8 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.5.4-x86_64-linux)
     ssrf_filter (1.1.1)
+    stimulus-rails (1.2.1)
+      railties (>= 6.0.0)
     temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.11)
@@ -303,6 +305,7 @@ DEPENDENCIES
   slim (~> 4.1.0)
   spring
   sqlite3 (~> 1.4)
+  stimulus-rails
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)

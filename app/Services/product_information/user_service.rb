@@ -2,7 +2,7 @@ module ProductInformation
 	class UserService
 
 		def self.get_user
-			data = User.all
+			data = User.first
 		end
 
 		def self.new_user

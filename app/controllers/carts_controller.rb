@@ -1,7 +1,11 @@
 class CartsController < ApplicationController
-	def get_cart
+
+	skip_before_action :verify_authenticity_token
+
+	def cart_index
+		
 		@data=ProductInformation::CartService.get_cart
-		render :json =>  @data
+		
 	end
 
 	def new_cart

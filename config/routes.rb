@@ -1,25 +1,26 @@
 Rails.application.routes.draw do
    
-
+   root 'products#index'
    
-# product
-   get "products/get_product", to: "products#index" , as: :index 
+#---------------------------------product--------------------------------------------------------
+     get "/products/get_product", to: "products#index" , as: :index 
+     get "/products/all_product", to: "products#product_index", as: :product_index
    get "products/new_product", to: "products#new_product"
    get "products/edit_product", to: "products#edit_product"
    put "products/update_product", to: "products#update_product"
    post "products/create_product", to: "products#create_product"
    delete "products/delete_product", to: "products#delete_product"
 
-#user
-   get "users/get_user", to: "users#get_user"
-   get "users/new_user", to:  "user#new_user"
-   get "users/edit_user", to:  "user#edit_user"
-   put "users/update_user", to:  "user#update_user"
-   post "users/create_user", to:  "user#create_user"
+#--------------------------------------User--------------------------------------------------------
+   get "/users/get_user", to: "users#user_index", as: :user_page
+   get "/users/new_user", to:  "users#new_user", as: :new_user
+   get "/users/edit_user", to:  "users#edit_user", as: :edit_user
+   put "/users/update_user", to:  "user#update_user",as: :update_user
+   post "/users/create_user", to:  "user#create_user"
    delete "users/delete_user", to:  "user#delete_user"
 
-#cart
-   get "carts/get_cart", to: "carts#get_cart"
+#---------------------------------------cart----------------------------------------------------------
+   get "/carts/get_cart", to: "carts#cart_index", as: :cart_index
    get "carts/new_cart", to:  "carts#new_cart"
    get "carts/edit_cart", to:  "carts#edit_cart"
    put "carts/update_cart", to:  "carts#update_cart"
@@ -33,6 +34,23 @@ Rails.application.routes.draw do
    put "user_address/create_user_address", to:  "user_address#create_user_address"
    post "user_address/delete_user_address", to:  "user_address#delete_user_address"
    delete "user_address/update_user_address", to:  "user_address#update_user_address"
+
+#payment
+
+get "/get_payment", to: "payments#payment_index", as: :payment_index
+get "payments/new_payment", to:  "payments#new_payment"
+get "payments/edit_payment", to:  "payments#edit_payment"
+put "payments/update_payment", to:  "payments#update_payment"
+post "payments/create_payment", to:  "payments#create_payment"
+delete "payments/delete_payment", to:  "payments#delete_payment"
+#payment_gateway
+
+get "payment_gateways/get_payment_gateway", to: "payment_gateways#get_payment_gateway"
+get "payment_gateways/new_payment_gateway", to:  "payment_gateways#new_payment_gateway"
+get "payment_gateways/edit_payment_gateway", to:  "payment_gateways#edit_payment_gateway"
+put "payment_gateways/update_payment_gateway", to:  "payment_gateways#update_payment_gateway"
+post "payment_gateways/create_payment_gateway", to:  "payment_gateways#create_payment_gateway"
+delete "payment_gateways/delete_payment_gateway", to:  "payment_gateways#delete_payment_gateway"
 
 #address
    get "address/get_address", to: "address#get_address"
@@ -104,22 +122,7 @@ Rails.application.routes.draw do
    post "order_details/create_order_detail", to:  "order_details#create_order_detail"
    delete "order_details/delete_order_detail", to:  "order_details#delete_order_detail"
 
-#payment
 
-   get "payments/get_payment", to: "payments#get_payment"
-   get "payments/new_payment", to:  "payments#new_payment"
-   get "payments/edit_payment", to:  "payments#edit_payment"
-   put "payments/update_payment", to:  "payments#update_payment"
-   post "payments/create_payment", to:  "payments#create_payment"
-   delete "payments/delete_payment", to:  "payments#delete_payment"
-#payment_gateway
-
-   get "payment_gateways/get_payment_gateway", to: "payment_gateways#get_payment_gateway"
-   get "payment_gateways/new_payment_gateway", to:  "payment_gateways#new_payment_gateway"
-   get "payment_gateways/edit_payment_gateway", to:  "payment_gateways#edit_payment_gateway"
-   put "payment_gateways/update_payment_gateway", to:  "payment_gateways#update_payment_gateway"
-   post "payment_gateways/create_payment_gateway", to:  "payment_gateways#create_payment_gateway"
-   delete "payment_gateways/delete_payment_gateway", to:  "payment_gateways#delete_payment_gateway"
 
 #product_stocks
 get "product_stocks/get_product_stock", to: "product_stocks#get_product_stock"

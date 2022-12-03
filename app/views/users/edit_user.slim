@@ -1,0 +1,76 @@
+body
+ = form_with  method: :put,url: user_page_path do |form|
+    .container[ 
+        data-controller='hello']
+      .row.gutters
+        .col-xl-3.col-lg-3.col-md-12.col-sm-12.col-12
+          .card.h-100
+            .card-body
+              .account-settings
+                .user-profile
+                  .user-avatar
+                    img.rounded-circle[src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin"]
+                  h5.user-name
+                    | Yuki Hayashi
+                  h6.user-email
+                    | yuki@Maxwell.com
+                .about
+                  h5
+                    | About
+                  p
+                    | I'm Yuki. Full Stack Designer I enjoy creating user-centric, delightful and human experiences.
+        .col-xl-9.col-lg-9.col-md-12.col-sm-12.col-12
+          .card.h-100
+            .card-body
+              .row.gutters
+                .col-xl-12.col-lg-12.col-md-12.col-sm-12.col-12
+                  h6.mb-2.text-primary
+                    | Personal Details
+                .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+                  .form-group
+                    label.lable-class[for="first_name"]  First Name
+                    = form.text_field :first_name, class:"box-class", placeholder:"Enter First Name", id:"first_name", data: {"user-target" => "first_name" , action: "focusout->user#first_name_validation" }
+                .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+                  .form-group
+                    label.lable-class[for="last_name"]  Last Name
+                    = form.text_field :last_name, class:"box-class", placeholder:"Enter Last Name", id:"last_name", data: {"user-target" => "last_name" , action: "focusout->user#last_name_validation" }
+                .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+                  .form-group
+                    label.lable-class[for="phone"]  Phone Number
+                    = form.text_field :phone_number, class:"box-class", placeholder:"Enter Phone Number", id:"phone", data: {"user-target" => "phone_number" , action: "focusout->user#phone_validation" }
+                .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+                 .form-group
+                    label.lable-class[for="email"]  Email
+                    = form.text_field :email, class:"box-class", placeholder:"Enter Email id", id:"email", data: {"user-target" => "email" , action: "focusout->user#email_validation" }
+                .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+                  .form-group
+                    label.lable-class[for="file"]  File Extension
+                    = form.file_field :file_extension, class:"box-class", placeholder:"Add File ", id:"file", data: {"user-target" => "file_extension" , action: "focusout->user#vendor_name_validation" }
+              .row.gutters
+                .col-xl-12.col-lg-12.col-md-12.col-sm-12.col-12
+                  h6.mt-3.mb-2.text-primary
+                    | Address
+                .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+                  .form-group
+                    label.lable-class[for="file"] State
+                    = form.text_field :state_id, class:"box-class", placeholder:"Enter Vendor Name", id:"state", data: {"vendorform-target" => "vendor_name" , action: "focusout->user#vendor_name_validation" }
+                .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+                  .form-group
+                    label.lable-class[for="file"]  City
+                    = form.text_field :city_village_id, class:"box-class", placeholder:"Enter Vendor Name", id:"city", data: {"vendorform-target" => "vendor_name" , action: "focusout->user#vendor_name_validation" }
+                .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+                  .form-group
+                    label.lable-class[for="file"] Country
+                    = form.text_field :country_id, class:"box-class", placeholder:"Enter Vendor Name", id:"country", data: {"vendorform-target" => "vendor_name" , action: "focusout->user#vendor_name_validation" }
+                .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+                  .form-group
+                    label.lable-class[for="file"]  Zip Code
+                    = form.text_field :pincode, class:"box-class", placeholder:"Enter Vendor Name", id:"zipcode", data: {"vendorform-target" => "vendor_name" , action: "focusout->user#vendor_name_validation" }
+              .row.gutters
+                .col-xl-12.col-lg-12.col-md-12.col-sm-12.col-12
+                  .text-right
+                    .right_align
+                        = form.submit class:'create btn btn-outline-success' , data: {action: 'click-> vendorform#form_validation'}
+                    .right_align
+                      button.btn.btn-outline-dark
+                        a.hyper href="http://localhost:3000"  Cancel 

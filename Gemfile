@@ -21,13 +21,15 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem "carrierwave"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+# gem 'solargraph', '~> 0.1.0'
 
+# gem 'thor', '~> 1.2', '>= 1.2.1'
 
 gem 'slim', '~> 4.1.0'
 
@@ -36,6 +38,10 @@ gem "byebug"
 gem 'rspec-rails', '~> 5.0.0'
 
 gem "grape"
+
+# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+gem "stimulus-rails"
+
 
 gem "grape-entity"
 
